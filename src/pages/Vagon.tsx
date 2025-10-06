@@ -37,7 +37,7 @@ export default function Vagon() {
                 <input type='file' 
                     onChange={ (fileInput) => { 
                     const file = fileInput.target.files?.[0]; 
-                    file && uploadImage(file, id) }} 
+                    file && uploadImage(file, vagon.VagonNumber) }} 
                     style={{display: "none"}}/>
                 Upload photo
             </label>
