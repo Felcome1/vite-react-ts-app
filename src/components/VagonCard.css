@@ -1,0 +1,37 @@
+
+.vagon-card {
+    border: 1px solid #666;
+    border-radius: 8px;
+    padding: 12px;
+    width: 320px;
+    margin: 12px;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vagon-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vagon-row-top {
+    font-weight: bold;
+}
+
+.vagon-row-name {
+    justify-content: flex-end;
+    font-size: 1.1em;
+}
+
+.vagon-row-route {
+    justify-content: space-between;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.vagon-row-button {
+    justify-content: right;
+}

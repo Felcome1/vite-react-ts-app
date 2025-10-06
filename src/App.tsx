@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Index from './pages/Index'
+import Vagons from './pages/Vagons'
+import Gallery from './pages/Gallery'
+import Header from './components/Header'
+import Vagon from './pages/Vagon'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      
+      <Routes >
+        <Route path="/" element={<Index />} />
+        <Route path="/vagons" element={<Vagons />} />
+        <Route path="/gallery" element={< Gallery />} />
+        <Route path="/vagons/:id" element={<Vagon />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Routes>
     </>
   )
 }
